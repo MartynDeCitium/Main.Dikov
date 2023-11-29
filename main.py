@@ -8,7 +8,8 @@ def show_main_page():
     st.subheader('Исследование выпрямительных устройств')
 
     # Добавляем изображение перед остальным кодом
-    st.image("Рисунок 1.WEBP", caption="Рисунок 1. Схема однополупериодного выпрямителя", use_column_width=True)
+    st.image("однополупериодный выпрямитель.jpg", 
+             caption="Рисунок 1. Схема однополупериодного выпрямителя", use_column_width=True)
 
     Uinput = st.number_input('Введите U2 тр-ра', min_value=10, max_value=20, value="min", step=1)
     st.write('U2 тр-ра = ', Uinput, ' В')
@@ -52,7 +53,7 @@ def show_single_phase_bridge_page():
     RLoad1 = col1.slider("Сопротивление нагрузки", 0.01, 5.0, 1.0)
     col1.write("Сопротивление нагрузки")
     col2.write('Рисунок 2. Схема однофазного мостового выпрямителя')
-    # col2.image("Картинка2.png")
+    col2.image("мостовой выпрямитель.jpg")
 
 # Функция для отображения страницы с трехфазной 1-полупериодной
 def show_three_phase_single_half_wave_page():
@@ -77,7 +78,7 @@ def show_three_phase_single_half_wave_page():
     RLoad1 = col1.slider("Сопротивление нагрузки", 0.01, 5.0, 1.0)
     col1.write("Сопротивление нагрузки")
     col2.write('Рисунок 3. Трехфазная однополупериодная схема выпрямления')
-    # col2.image("Картинка2.png")
+    # col2.image("Рисунок3.jpg")
 
 # Функция для отображения страницы с трехфазной мостовой
 def show_three_phase_bridge_page():
@@ -102,7 +103,7 @@ def show_three_phase_bridge_page():
     RLoad1 = col1.slider("Сопротивление нагрузки", 0.01, 5.0, 1.0)
     col1.write("Сопротивление нагрузки")
     col2.write('Рисунок 4. Трехфазная мостовая схема выпрямления')
-    # col2.image("Картинка2.png")
+    # col2.image("Рисунок4.jpg")
 
 # Основная часть программы
 page = st.sidebar.selectbox("Выберите страницу", ["Однофазная 1-полупериодная", "Однофазная мостовая", "Трехфазная 1-полупериодная", "Трехфазная мостовая"])
